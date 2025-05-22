@@ -1,13 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"strconv"
 	"strings"
 )
 
 func main() {
+	echo2()
+}
+
+func echo2() {
 	var s, tmp strings.Builder
 	sep := ""
 	for i, arg := range os.Args[1:] {
@@ -17,8 +20,8 @@ func main() {
 		tmp.WriteString(strconv.Itoa(i + 1))
 		tmp.WriteString(" ")
 		tmp.WriteString(arg)
-		fmt.Println(tmp.String())
+		// fmt.Println(tmp.String())
 		sep = " "
 	}
-	fmt.Println(s.String())
+	// fmt.Println(s.String())
 }
